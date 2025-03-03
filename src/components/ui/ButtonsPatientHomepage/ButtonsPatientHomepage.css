@@ -63,7 +63,6 @@ button:active {
   justify-self: end;
 }
 
-@media (max-width: 600px) {}
 
 
 @media (min-width: 600px) and (max-width: 1024px) {
