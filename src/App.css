@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 :root {
   --text-color: #363F3D;    
   --background-color: #FFFFFF;
@@ -9,3 +5,14 @@
   --primary-color: #E3EAC4;   
   --hover-active-color: #C4CAAA;    
 }
+
+
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+

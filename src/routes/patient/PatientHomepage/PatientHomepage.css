@@ -1,0 +1,17 @@
+.headerPatient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homeIcon {
+  width: 74px;
+  height: 74px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+}
+.PatientHomepageContainer {
+    display:flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
