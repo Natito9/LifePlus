@@ -1,6 +1,6 @@
 import React from 'react';
 import './LandingPage.css';
-import bannerSvg from "../../../../assets/images/banner.svg";
+import bannerSvg from "../../../assets/images/banner.svg";
 
 function LandingPage() {
   return (
