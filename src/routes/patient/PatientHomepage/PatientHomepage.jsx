@@ -4,12 +4,12 @@ import ButtonsPatientHomepage from "../../../components/ui/ButtonsPatientHomepag
 
 function PatientHomepage() {
   return (
-    <div className="PatientHomepageContainer">
+    <div className="patientHomepageContainer">
       <header className="headerPatient">
         <img src={homeIcon} alt="HomeIcon" className="homeIcon" />
-        <div className="PatientHeader">
-          <h1>Tom Cruise</h1>
-          <p>Patient ID : 357321</p>
+        <div className="patientHeader">
+          <h1 className="patientName">Tom Cruise</h1>
+          <p className="patientId">Patient ID : 357321</p>
         </div>
       </header>
       <ButtonsPatientHomepage />
