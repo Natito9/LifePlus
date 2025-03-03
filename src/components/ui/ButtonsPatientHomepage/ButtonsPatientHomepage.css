@@ -1,3 +1,4 @@
+
 button {
   display: flex;
   justify-content: center;
@@ -10,21 +11,21 @@ button {
 }
 
 button:active {
-    background: var(--primary-color)
+  background: var(--primary-color);
 }
 
 .btnsPHomepageContainer {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-row: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-row: auto;
   gap: 21px;
-  /* width: 341px; */
   justify-content: center;
+  justify-items: center;
   align-content: center;
   align-items: center;
-  /* width: 90vw; */
-  margin: 16px;
   max-width: 430px;
+  min-width:340px;
+  width: 100%;
 }
 
 .btnJournal {
@@ -32,7 +33,7 @@ button:active {
   grid-row: 1;
   padding: 25px 20px;
   gap: 34px;
-  /* align-self: stretch; */
+  width:100%;
 }
 
 .btnTestResults,
@@ -40,7 +41,6 @@ button:active {
   flex-direction: column;
   width: 160px;
   height: 163px;
-  /* flex-shrink: 0; */
 }
 
 .btnTestResults {
@@ -48,6 +48,7 @@ button:active {
   grid-row: 2;
   gap: 7px;
   padding-bottom: 11px;
+  justify-self: start;
 }
 
 .btnTestResults img {
@@ -59,5 +60,23 @@ button:active {
   grid-column: 2;
   grid-row: 2;
   gap: 10px;
-  justify-items: end;
+  justify-self: end;
 }
+
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .btnsPHomepageContainer {
+      margin: 16px; 
+      width: 100%;  
+    }
+  
+    .btnTestResults,
+    .btnPrescriptions {
+      min-width: 200px;  
+      min-height: 200px; 
+    }
+  
+
+  }
+  

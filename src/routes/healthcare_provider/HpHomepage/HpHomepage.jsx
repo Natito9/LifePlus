@@ -1,11 +1,25 @@
-import React from 'react'
+import "./HpHomepage.css"
+import { useState } from "react";
 
 function HpHomepage() {
+    const [searchTerm, setSearchTerm] = useState("");
   return (
-    <div>
-     <p>Here is Healthcare provider homepage</p> 
+    <div className="hProvidertHomepageContainer">
+      <header className="hProviderheader">
+          <h1 className="hProviderName">DR. Hui Chen</h1>
+          <p className="hProviderId">HOSP: 3573-22</p>
+      </header>
+      <input
+        type="text"
+        className="search-bar"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      
+      
     </div>
-  )
+  );
 }
 
 export default HpHomepage;
