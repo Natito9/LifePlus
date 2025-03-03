@@ -1,11 +1,16 @@
+import "./reset.css"
 import './App.css';
 import React from 'react';
-import PatientHomepage from './routes/patient/PatientHomepage/PatientHomepage';
+import Navbar from "./components/layout/NavBar/NavBar";
+// import PatientHomepage from './routes/patient/PatientHomepage/PatientHomepage';
+import HpHomepage from "./routes/healthcare_provider/HpHomepage/HpHomepage";
 
 function App() {
   return (
     <div className="App">
-      <PatientHomepage/>
+      {/* <PatientHomepage/> */}
+      <HpHomepage/>
+      <Navbar/>
     </div>
   );
 }

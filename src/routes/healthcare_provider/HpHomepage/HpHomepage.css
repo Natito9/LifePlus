@@ -1,0 +1,23 @@
+.ProvidertHomepageContainer{}
+
+.hProviderheader{
+    margin-top: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 125px;
+  width: 375px;
+  gap: 0.5rem;
+}
+
+.hProviderName{
+    font-size: 1.5rem;
+    font-weight: 600;
+    justify-self:left;
+}
+
+.hProviderId{
+    font-size: 1rem;
+    justify-self:left;
+}
