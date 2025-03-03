@@ -18,13 +18,13 @@
 
 .welcomeText {
   font-size: 1.5rem;
-  margin-top: 3.5rem;
+  margin-top: 5rem;
   margin-bottom: 1rem;
 }
 
 .lifePlusText {
   font-size: 5rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 5rem;
 }
 
 .questionText {
@@ -51,6 +51,7 @@
   font-size: 1.1rem;
   border-radius: 0.6rem;
   border: 2px solid var(--text-color);
+  cursor: pointer;
 }
 
 .termsAcceptance {
