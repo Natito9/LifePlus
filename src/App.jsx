@@ -1,14 +1,27 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import LandingPage from "./routes/shared/LandingPage/LandingPage";
+import Login from "./routes/shared/Login/Login";
+import Journal from "./routes/shared/Journal/Journal";
+import Prescriptions from "./routes/shared/Prescriptions/Prescriptions";
+import TestResults from "./routes/shared/TestResults/TestResults";
+import UserProfile from "./routes/shared/UserProfile/UserProfile";
+import HpHomepage from "./routes/healthcare_provider/HpHomepage/HpHomepage";
+import PatientProfile from "./routes/healthcare_provider/PatientProfile/PatientProfile";
+import PatientRecords from "./routes/healthcare_provider/PatientRecords/PatientRecords";
+import PatientHomepage from "./routes/patient/PatientHomepage/PatientHomepage";
+import Header from "./components/layout/Header/Header";
+import NavBar from "./components/layout/NavBar/NavBar";
 import "./reset.css"
 import './App.css';
-import React from 'react';
-import Navbar from "./components/layout/NavBar/NavBar";
-// import PatientHomepage from './routes/patient/PatientHomepage/PatientHomepage';
-import HpHomepage from "./routes/healthcare_provider/HpHomepage/HpHomepage";
+
+
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Header />
       <Routes>
         {/* Shared Routes */}
         <Route path="/" element={<LandingPage />} />
@@ -26,9 +39,7 @@ function App() {
          {/* Patient Routes */}
          <Route path="/patient/homepage" element={<PatientHomepage/>} />
       </Routes>
-      {/* <PatientHomepage/> */}
-      <HpHomepage/>
-      <Navbar/>
+      <NavBar />
     </div>
   );
 }
