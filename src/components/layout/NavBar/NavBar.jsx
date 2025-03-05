@@ -9,14 +9,14 @@ const NavBar = () => {
   const location = useLocation();
   const { userRole } = useUserRole();
 
-  const isHomeActive = location.pathname === "/patient/homepage" || location.pathname === "/hp/homepage";
+  const isHomepageActive = location.pathname === "/patient/homepage" || location.pathname === "/hp/homepage";
 
   return (
     <nav className="navbar">
       {userRole === "patient" ? (
         <>
           <button
-            className={`btn homeNav ${isHomeActive ? "active" : ""}`}
+            className={`btn homeNav ${isHomepageActive ? "active" : ""}`}
             onClick={() => navigate("/patient/homepage")}
           >
             <img src={homeIcon} alt="Home Icon" className="homeNavIcon" />
@@ -32,7 +32,7 @@ const NavBar = () => {
       ) : (
         <>
           <button
-           className={`btn homeNav ${isHomeActive ? "active" : ""}`}
+           className={`btn homeNav ${isHomepageActive ? "active" : ""}`}
             onClick={() => navigate("/hp/homepage")}
           >
             <img src={homeIcon} alt="Home Icon" className="homeNavIcon" />
