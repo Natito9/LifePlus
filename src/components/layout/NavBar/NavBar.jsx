@@ -1,50 +1,32 @@
-import homeIcon from "../../../assets/icons/home.svg";
-import moreIcon from "../../../assets/icons/dotsVerticalMore.svg";
-import { useNavigate } from "react-router-dom";
-import { useUserRole } from "../../UserRoleContext/UserRoleContext";
+/* import NavBarMobile from "./NavBarMobile";
+import NavBarDesktop from "./NavBarDesktop";
 import "./NavBar.css";
 
-const Navbar = () => {
-  const navigate = useNavigate();
-  const {userRole} = useUserRole();
-
+function NavBar() {
   return (
-    <nav className="navbar">
-      {userRole === "patient" ?(
-        <>
-      <button
-        className="btn homeNav"
-        onClick={()=> navigate("/patient/homepage")}
-      >
-        <img src={homeIcon} alt="Home Icon" className="homeNavIcon" />
-        Home
-      </button>
-
-      <button className="btn moreNav">
-        {/* onclick open menu */}
-        <img src={moreIcon} alt="More Icon" className="moreNavIcon" />
-        More
-      </button>
-      </>): userRole === "provider" ? (
-        <>
-         <button
-        className="btn homeNav"
-        onClick={()=> navigate("/hp/homepage")}
-      >
-        <img src={homeIcon} alt="Home Icon" className="homeNavIcon" />
-        Home
-      </button>
-
-      <button className="btn moreNav">
-        {/* onclick open menu */}
-        <img src={moreIcon} alt="More Icon" className="moreNavIcon" />
-        More
-      </button>
-        </>
-      ) : null
-      }
-    </nav>
+    <>
+      <nav className="NavBar NavBarMobile">
+        <NavBarMobile />
+      </nav>
+      <nav className="NavBar NavBarDesktop">
+        <NavBarDesktop />
+      </nav>
+    </>
   );
-};
+}
 
-export default Navbar;
+export default NavBar; */
+
+
+import useScreenSize from "../../../Hooks/useScreenSize";
+import NavBarMobile from "./NavBarMobile";
+import NavBarDesktop from "./NavBarDesktop";
+
+
+function HpHomepage() {
+   const isMobile = useScreenSize();
+
+   return isMobile ? <NavBarMobile /> : <NavBarDesktop />;
+}
+
+export default HpHomepage;

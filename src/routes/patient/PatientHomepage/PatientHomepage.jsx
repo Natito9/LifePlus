@@ -3,6 +3,7 @@ import useScreenSize from "../../../Hooks/useScreenSize";
 import PatientHomepageDesktop from "./PatientHomepageDesktop";
 import homeIcon from "../../../assets/icons/home.svg";
 import ButtonsPatientHomepage from "../../../components/ui/ButtonsPatientHomepage/ButtonsPatientHomepage";
+import NavBarMobileModal from "../../../components/layout/NavBar/NavBarMobileModal/NavBarMobileModal";
 
 function PatientHomepage() {
   const isMobile = useScreenSize();
@@ -17,6 +18,7 @@ function PatientHomepage() {
         </div>
       </header>
       <ButtonsPatientHomepage />
+      <NavBarMobileModal />
     </div>
 
     : <PatientHomepageDesktop />
