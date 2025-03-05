@@ -7,14 +7,16 @@ function NavBarDesktop() {
     const { userRole } = useUserRole();
 
     return (
-        <header className="doctorsNavbarDesktopContainer">
-            <h1 className="logoDesktop">Life +</h1>
-            {userRole === "patient" ? (
-                <HeaderProfileIconPatient />
-            ) : userRole === "provider" ? (
-                <HeaderProfileIconDoctor />
-            ) : null}
-        </header>
+        <div className="homepageDesktopWrap">
+            <header className="navbarDesktopContainer">
+                <h1 className="logoDesktop">Life +</h1>
+                {userRole === "patient" ? (
+                    <HeaderProfileIconPatient />
+                ) : userRole === "provider" ? (
+                    <HeaderProfileIconDoctor />
+                ) : null}
+            </header>
+        </div>
     )
 }
 

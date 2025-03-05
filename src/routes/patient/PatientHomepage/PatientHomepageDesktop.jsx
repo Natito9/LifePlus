@@ -1,4 +1,3 @@
-import NavBarDesktop from "../../../components/layout/NavBar/NavBarDesktop";
 import { useUserRole } from "../../../components/UserRoleContext/UserRoleContext";
 import { useEffect } from "react";
 
@@ -13,9 +12,7 @@ function PatientHomepageDesktop() {
 
     return (
         <div className="hpHomepageDesktopBody">
-            <div className="hpHomepageDesktopWrap">
-                <NavBarDesktop />
-            </div>
+            
         </div>
     )
 }

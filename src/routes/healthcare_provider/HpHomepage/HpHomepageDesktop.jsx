@@ -1,4 +1,3 @@
-import NavBarDesktop from "../../../components/layout/NavBar/NavBarDesktop";
 import { useUserRole } from "../../../components/UserRoleContext/UserRoleContext";
 import { useEffect } from "react";
 import "./HpHomepageDesktop.css"
@@ -14,9 +13,7 @@ function HpHomepageDesktop() {
 
     return (
         <div className="hpHomepageDesktopBody">
-            <div className="hpHomepageDesktopWrap">
-                <NavBarDesktop />
-            </div>
+
         </div>
     )
 }
