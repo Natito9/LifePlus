@@ -1,5 +1,7 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { UserRoleProvider } from "./components/UserRoleContext/UserRoleContext";
 import "./App.css";
 import LandingPage from "./routes/shared/LandingPage/LandingPage";
 import Login from "./routes/shared/Login/Login";
@@ -13,14 +15,15 @@ import PatientRecords from "./routes/healthcare_provider/PatientRecords/PatientR
 import PatientHomepage from "./routes/patient/PatientHomepage/PatientHomepage";
 import Header from "./components/layout/Header/Header";
 import NavBar from "./components/layout/NavBar/NavBar";
-import "./reset.css"
-import './App.css';
-
-
+import "./reset.css";
+import "./App.css";
 
 function App() {
+  const location = useLocation();
+  const isLandingPage = location.pathname === "/";
   return (
     <div className="App">
+       <UserRoleProvider>
       <Header />
       <Routes>
         {/* Shared Routes */}
@@ -33,13 +36,15 @@ function App() {
 
         {/* Healthcare Provider Routes */}
         <Route path="/hp/homepage" element={<HpHomepage />} />
-        <Route path="/hp/patient-records" element={<PatientRecords/>} />
+        <Route path="/hp/patient-records" element={<PatientRecords />} />
         <Route path="/hp/patient-profile" element={<PatientProfile />} />
 
-         {/* Patient Routes */}
-         <Route path="/patient/homepage" element={<PatientHomepage/>} />
+        {/* Patient Routes */}
+        <Route path="/patient/homepage" element={<PatientHomepage />} />
       </Routes>
-      <NavBar />
+      {/* Render the navbar if it is not on landingpage */}
+      {!isLandingPage && <NavBar />}
+      </UserRoleProvider>
     </div>
   );
 }
