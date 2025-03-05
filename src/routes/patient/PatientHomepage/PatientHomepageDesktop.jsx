@@ -22,8 +22,8 @@ function PatientHomepageDesktop() {
     return (
         <>
             <div className="homepageDesktopGrid">
-                <nav className="patientHomelink">
-                    <Link to="/patient/homepage">Home</Link>
+                <nav className="patientHomeLinkContainer">
+                    <Link to="/patient/homepage" className="patientHomeLink">Home</Link>
                 </nav>
 
                 <header className="patientHomepageDesktopHeader">
