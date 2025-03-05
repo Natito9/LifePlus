@@ -1,7 +1,6 @@
 import "./PatientHomepage.css";
 import homeIcon from "../../../assets/icons/home.svg";
 import ButtonsPatientHomepage from "../../../components/ui/ButtonsPatientHomepage/ButtonsPatientHomepage";
-import NavBarMobileModal from "../../../components/layout/NavBar/NavBarMobileModal/NavBarMobileModal";
 
 function PatientHomepage() {
   return (
@@ -14,7 +13,6 @@ function PatientHomepage() {
         </div>
       </header>
       <ButtonsPatientHomepage />
-      <NavBarMobileModal />
     </div>
   );
 }
