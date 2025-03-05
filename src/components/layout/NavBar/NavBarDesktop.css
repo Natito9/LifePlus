@@ -1,9 +1,16 @@
-.doctorsNavbarDesktopContainer {
+.homepageDesktopWrap {
     display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbarDesktopContainer {
+    display: flex;
+    max-width: 1024px;
     width: 100%;
     justify-content: space-between;
     align-items: center;
- /*    margin: 0 50px; */
+    padding: 0 50px;
     background-color: var(--primary-color);
     position: sticky;
     top: 0;

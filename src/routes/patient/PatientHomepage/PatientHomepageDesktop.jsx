@@ -1,21 +1,20 @@
 import { useUserRole } from "../../../components/UserRoleContext/UserRoleContext";
 import { useEffect } from "react";
-import "./HpHomepageDesktop.css"
 
-function HpHomepageDesktop() {
+function PatientHomepageDesktop() {
     const { userRole, setUserRole } = useUserRole();
     
     useEffect(() => {
-        if (userRole !== "provider") {
-            setUserRole("provider");
+        if (userRole !== "patient") {
+            setUserRole("patient");
         }
     }, [userRole, setUserRole])
 
     return (
         <div className="hpHomepageDesktopBody">
-
+            
         </div>
     )
 }
 
-export default HpHomepageDesktop;
+export default PatientHomepageDesktop;
