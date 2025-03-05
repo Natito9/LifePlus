@@ -4,7 +4,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useUserRole } from "../../UserRoleContext/UserRoleContext";
 import "./NavBarMobile.css";
 
-const NavBar = () => {
+// NavBar changed to NavBarMobile
+const NavBarMobile = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { userRole } = useUserRole();
@@ -50,4 +51,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavBarMobile;
