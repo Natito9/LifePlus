@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { UserRoleProvider } from "./components/UserRoleContext/UserRoleContext";
 import "./App.css";
@@ -23,27 +23,27 @@ function App() {
   const isLandingPage = location.pathname === "/";
   return (
     <div className="App">
-       <UserRoleProvider>
-      <Header />
-      <Routes>
-        {/* Shared Routes */}
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/user-profile" element={<UserProfile />} />
-        <Route path="/journal" element={<Journal />} />
-        <Route path="/test-results" element={<TestResults />} />
-        <Route path="/prescriptions" element={<Prescriptions />} />
+      <UserRoleProvider>
+        <Header />
+        <Routes>
+          {/* Shared Routes */}
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/journal" element={<Journal />} />
+          <Route path="/test-results" element={<TestResults />} />
+          <Route path="/prescriptions" element={<Prescriptions />} />
 
-        {/* Healthcare Provider Routes */}
-        <Route path="/hp/homepage" element={<HpHomepage />} />
-        <Route path="/hp/patient-records" element={<PatientRecords />} />
-        <Route path="/hp/patient-profile" element={<PatientProfile />} />
+          {/* Healthcare Provider Routes */}
+          <Route path="/hp/homepage" element={<HpHomepage />} />
+          <Route path="/hp/patient-records" element={<PatientRecords />} />
+          <Route path="/hp/patient-profile" element={<PatientProfile />} />
 
-        {/* Patient Routes */}
-        <Route path="/patient/homepage" element={<PatientHomepage />} />
-      </Routes>
-      {/* Render the navbar if it is not on landingpage */}
-      {!isLandingPage && <NavBar />}
+          {/* Patient Routes */}
+          <Route path="/patient/homepage" element={<PatientHomepage />} />
+        </Routes>
+        {/* Render the navbar if it is not on landingpage */}
+        {!isLandingPage && <NavBar />}
       </UserRoleProvider>
     </div>
   );
