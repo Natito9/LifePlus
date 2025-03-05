@@ -5,6 +5,8 @@
     align-items: center;
  /*    margin: 0 50px; */
     background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
 }
 
 .logoDesktop {
