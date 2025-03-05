@@ -1,11 +1,19 @@
-import doctorProfilePic from "../../../assets/icons/doctor-profile-pic.svg"
-import "./NavBarDesktop.css"
+import HeaderProfileIconDoctor from "../../ui/HeaderProfileIcons/HeaderProfileIconDoctor";
+import HeaderProfileIconPatient from "../../ui/HeaderProfileIcons/HeaderProfileIconPatient";
+import { useUserRole } from "../../UserRoleContext/UserRoleContext";
+import "./NavBarDesktop.css";
 
 function NavBarDesktop() {
+    const { userRole } = useUserRole();
+
     return (
         <header className="doctorsNavbarDesktopContainer">
             <h1 className="logoDesktop">Life +</h1>
-            <img src={doctorProfilePic} alt="Doctor's profile rounded pic" />
+            {userRole === "patient" ? (
+                <HeaderProfileIconPatient />
+            ) : userRole === "provider" ? (
+                <HeaderProfileIconDoctor />
+            ) : null}
         </header>
     )
 }

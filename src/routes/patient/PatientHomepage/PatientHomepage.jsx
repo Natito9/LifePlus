@@ -1,9 +1,13 @@
 import "./PatientHomepage.css";
+import useScreenSize from "../../../Hooks/useScreenSize";
+import PatientHomepageDesktop from "./PatientHomepageDesktop";
 import homeIcon from "../../../assets/icons/home.svg";
 import ButtonsPatientHomepage from "../../../components/ui/ButtonsPatientHomepage/ButtonsPatientHomepage";
 
 function PatientHomepage() {
+  const isMobile = useScreenSize();
   return (
+    isMobile ? 
     <div className="patientHomepageContainer">
       <header className="headerPatient">
         <img src={homeIcon} alt="HomeIcon" className="homeIcon" />
@@ -14,6 +18,8 @@ function PatientHomepage() {
       </header>
       <ButtonsPatientHomepage />
     </div>
+
+    : <PatientHomepageDesktop />
   );
 }
 
