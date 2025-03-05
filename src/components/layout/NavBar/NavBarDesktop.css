@@ -1,0 +1,17 @@
+.doctorsNavbarDesktopContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.logoDesktop {
+    color: #455451;
+    font-family: Karla;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.64px;
+}
