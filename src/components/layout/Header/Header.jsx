@@ -5,12 +5,13 @@ import "./Header.css"
 function Navbar() {
   return (
     <nav>
-        <ul>
+      <ul>
         <li><Link to="/">Landing Page</Link></li>
         <li><Link to="/login">Login</Link></li>
-       <li> <Link to="/hp/homepage">Healthcare Provider Homepage</Link></li>
-       <li> <Link to="/patient/homepage">Patient Homepage</Link></li>
-        </ul>
+        <li><Link to="/hp/homepage">Healthcare Provider Homepage</Link></li>
+        <li><Link to="/patient/homepage">Patient Homepage</Link></li>
+        <li><Link to="/hp/patient-profile">Patient Profile</Link></li>
+      </ul>
     </nav>
   )
 }

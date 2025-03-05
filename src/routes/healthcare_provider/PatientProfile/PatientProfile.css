@@ -1,0 +1,70 @@
+#currentPatientProfile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+    height: 85vh;
+    margin: 16px;
+}
+
+#patientProfileMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.pageLeftHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.pageCenterHeader {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.patientAllertInfoGrid {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    min-width: 343px;
+    height: fit-content;
+    gap: 16px;
+    padding: 0 0 40px 0;
+}
+
+.patientAllertInfoGridCell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 69px;
+
+    border-radius: 6px;
+    background: #F5F5F5;
+}
+
+.patientContactInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+}
+
+.patientContactInfoRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 10px;
+    width: 100%;
+
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
