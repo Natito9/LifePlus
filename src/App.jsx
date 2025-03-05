@@ -25,6 +25,8 @@ function App() {
     <div className="App">
       <UserRoleProvider>
         <Header />
+        {/* Render the navbar if it is not on landingpage */}
+        {!isLandingPage && <NavBar />}
         <Routes>
           {/* Shared Routes */}
           <Route path="/" element={<LandingPage />} />
@@ -42,8 +44,6 @@ function App() {
           {/* Patient Routes */}
           <Route path="/patient/homepage" element={<PatientHomepage />} />
         </Routes>
-        {/* Render the navbar if it is not on landingpage */}
-        {!isLandingPage && <NavBar />}
       </UserRoleProvider>
     </div>
   );

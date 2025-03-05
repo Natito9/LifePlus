@@ -1,5 +1,5 @@
 
-button {
+.btnsPHomepageContainer button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@ button {
   font-size: 1rem;
 }
 
-button:active {
+.btnsPHomepageContainer button:active {
   background: var(--primary-color);
 }
 

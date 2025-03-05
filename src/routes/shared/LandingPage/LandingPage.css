@@ -49,9 +49,14 @@
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
+  background: var(--background-color);
   border-radius: 0.6rem;
   border: 2px solid var(--text-color);
   cursor: pointer;
+}
+
+.landingPageContainer button:active {
+  background: var(--primary-color);
 }
 
 .termsAcceptance {
