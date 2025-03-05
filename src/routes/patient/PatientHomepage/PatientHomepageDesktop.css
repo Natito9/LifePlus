@@ -4,9 +4,9 @@
     color: var(--text-color);
     width: 100%;
     max-width: 1024px;
-    gap: 30px;
     margin: 0 auto;
     height: calc(100vh - 65px - 98px);
+    padding: 0 50px;
 }
 
 .patientHomeLinkContainer {
@@ -26,7 +26,6 @@
 
     display: flex;
     justify-content: center;
-    padding: 10px;
     align-items: center;
     gap: 27px;
     flex: 1 0 0;
@@ -54,12 +53,15 @@
 }
 
 .patientHomepageMainContainer {
+    grid-area: 2 / 2 / 3 / 3;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
     padding: 0 50px;
     height: fit-content;
+    width: 604px;
 }
 
 .testResultsDropdown {
@@ -69,6 +71,7 @@
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
+    width: 100%;
 
     border-radius: 10px;
     border: var(--border-styling);
