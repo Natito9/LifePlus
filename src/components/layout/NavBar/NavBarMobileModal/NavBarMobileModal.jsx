@@ -1,26 +1,38 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./NavBarMobileModal.css";
-import profileIcon from "../../../../assets/icons/profile.svg";
-import logOutIcon from "../../../../assets/icons/logOut.svg";
-import { useNavigate } from "react-router-dom";
 
-function NavBarMobileModal() {
-  const navigate = useNavigate();
+function NavBarMobileModal({ isOpen, onClose, children }) {
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    const modal = modalRef.current;
+    console.log("Modal isOpen: ", isOpen); 
+    if (isOpen) {
+      modal.style.display = "block";
+    } else {
+      modal.style.display = "none";
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (isOpen && modalRef.current && !modalRef.current.contains(e.target)) {
+        console.log("handleClickOutside Closing modal is working ");
+        onClose();
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen,onClose]);
 
   return (
-    <div className="btnNavbarMobileModalContainer">
-      <button
-        className="btnMyProfile"
-        onClick={() => navigate("/user-profile")}
-      >
-        My profile
-        <img src={profileIcon} alt="Profile Icon" />
-      </button>
+    <div>
 
-      <button className="btnLogOut" onClick={() => navigate("/")}>
-        Log out
-        <img src={logOutIcon} alt="Log Out Icon" />
-      </button>
+      <div ref={modalRef} className="navModal" >
+        {children}
+      </div>
     </div>
   );
 }
