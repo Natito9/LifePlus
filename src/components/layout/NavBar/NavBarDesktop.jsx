@@ -1,5 +1,6 @@
 import HeaderProfileIconDoctor from "../../ui/HeaderProfileIcons/HeaderProfileIconDoctor";
 import HeaderProfileIconPatient from "../../ui/HeaderProfileIcons/HeaderProfileIconPatient";
+import NavBarDesktopModal from "./NavBarDesktopModal/NavBarDesktopModal";
 import { useUserRole } from "../../UserRoleContext/UserRoleContext";
 import "./NavBarDesktop.css";
 
@@ -16,6 +17,7 @@ function NavBarDesktop() {
                     <HeaderProfileIconDoctor />
                 ) : null}
             </div>
+            <NavBarDesktopModal />
         </div>
     )
 }
