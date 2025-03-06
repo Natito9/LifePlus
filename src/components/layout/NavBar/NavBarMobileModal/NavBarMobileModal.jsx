@@ -6,7 +6,6 @@ function NavBarMobileModal({ isOpen, onClose, children }) {
 
   useEffect(() => {
     const modal = modalRef.current;
-    console.log("Modal isOpen: ", isOpen); 
     if (isOpen) {
       modal.style.display = "block";
     } else {
@@ -17,7 +16,6 @@ function NavBarMobileModal({ isOpen, onClose, children }) {
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (isOpen && modalRef.current && !modalRef.current.contains(e.target)) {
-        console.log("handleClickOutside Closing modal is working ");
         onClose();
       }
     };
