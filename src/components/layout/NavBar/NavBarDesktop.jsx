@@ -8,14 +8,14 @@ function NavBarDesktop() {
 
     return (
         <div className="homepageDesktopWrap">
-            <header className="navbarDesktopContainer">
+            <div className="navbarDesktopContainer">
                 <h1 className="logoDesktop">Life +</h1>
                 {userRole === "patient" ? (
                     <HeaderProfileIconPatient />
                 ) : userRole === "provider" ? (
                     <HeaderProfileIconDoctor />
                 ) : null}
-            </header>
+            </div>
         </div>
     )
 }

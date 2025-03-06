@@ -1,0 +1,19 @@
+<svg width="33" height="46" viewBox="0 0 33 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Prescription icon">
+<line id="Line 47" x1="16.5" y1="2" x2="16.5" y2="5.55556" stroke="#363F3D"/>
+<g id="prescriptions">
+<line id="Line 42" x1="17.0674" y1="22.1453" x2="17.0674" y2="35.1453" stroke="#363F3D" stroke-width="2.5"/>
+<line id="Line 44" x1="16.6318" y1="1.70349" x2="16.6318" y2="6.8146" stroke="#363F3D" stroke-width="2"/>
+<line id="Line 45" x1="21.8418" y1="1.70349" x2="21.8418" y2="6.8146" stroke="#363F3D" stroke-width="2"/>
+<line id="Line 46" x1="11.4209" y1="1.70349" x2="11.4209" y2="6.8146" stroke="#363F3D" stroke-width="2"/>
+<line id="Line 43" x1="23" y1="28.25" x2="10" y2="28.25" stroke="#363F3D" stroke-width="2.5"/>
+<path id="Rectangle 1928" d="M1 20.2225C1 15.252 5.02944 11.2225 10 11.2225H23C27.9706 11.2225 32 15.252 32 20.2225V43.0003C32 44.1049 31.1046 45.0003 30 45.0003H3C1.89543 45.0003 1 44.1049 1 43.0003V20.2225Z" fill="white" stroke="#363F3D" stroke-width="2"/>
+<rect id="Rectangle 1929" x="6.21094" y="1" width="20.5789" height="9.92593" rx="1" fill="white" stroke="#363F3D" stroke-width="2"/>
+</g>
+<line id="Line 47_2" x1="16.75" y1="19" x2="16.75" y2="36.8043" stroke="#363F3D" stroke-width="2.5"/>
+<line id="Line 48" x1="26.1211" y1="27.8989" x2="7.99988" y2="27.8989" stroke="#363F3D" stroke-width="2.5"/>
+<line id="Line 49" x1="17" y1="2" x2="17" y2="5" stroke="#363F3D" stroke-width="2"/>
+<line id="Line 50" x1="23" y1="2" x2="23" y2="5" stroke="#363F3D" stroke-width="2"/>
+<line id="Line 51" x1="11" y1="2" x2="11" y2="5" stroke="#363F3D" stroke-width="2"/>
+</g>
+</svg>
