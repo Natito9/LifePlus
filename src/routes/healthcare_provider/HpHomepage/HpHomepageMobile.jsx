@@ -6,7 +6,7 @@ function HpHomepageMobile () {
   return (
     <div className="hProvidertHomepageContainer">
       <header className="hProviderheader">
-          <h1 className="hProviderName">DR. Hui Chen</h1>
+          <h2 className="hProviderName">DR. Hui Chen</h2>
           <p className="hProviderId">HOSP: 3573-22</p>
       </header>
       <input
