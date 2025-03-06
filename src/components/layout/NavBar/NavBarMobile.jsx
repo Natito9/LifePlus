@@ -14,18 +14,12 @@ const NavBarMobile = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const toggleModal = (e) => {
-    e.stopPropagation();
-    console.log("Toggling modal", isModalOpen);
-    setIsModalOpen((prevState) => {
-      console.log("Previous State:", prevState);
-      return !prevState;
-    });
+  const toggleModal = () => {
+    setIsModalOpen((prev) => !prev);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    console.log("Closing modal");
   };
 
   const isHomepageActive =
@@ -43,15 +37,6 @@ const NavBarMobile = () => {
             <img src={homeIcon} alt="Home Icon" className="homeNavIcon" />
             Home
           </button>
-
-          <button className="btn moreNav" onClick={toggleModal}>
-            <img src={moreIcon} alt="More Icon" className="moreNavIcon" />
-            More
-          </button>
-          {/* Pass'closeModal' as props to <NavbarMobileModalContent/> through <NavBarMobileModal/> */}
-          <NavBarMobileModal isOpen={isModalOpen} onClose={closeModal}>
-            <NavbarMobileModalContent onClose={closeModal} />
-          </NavBarMobileModal>
         </>
       ) : (
         <>
@@ -62,16 +47,16 @@ const NavBarMobile = () => {
             <img src={homeIcon} alt="Home Icon" className="homeNavIcon" />
             Home
           </button>
-
-          <button className="btn moreNav" onClick={toggleModal}>
-            <img src={moreIcon} alt="More Icon" className="moreNavIcon" />
-            More
-          </button>
-          <NavBarMobileModal isOpen={isModalOpen} onClose={closeModal}>
-            <NavbarMobileModalContent onClose={closeModal} />
-          </NavBarMobileModal>
         </>
       )}
+      <button className="btn moreNav" onClick={toggleModal}>
+        <img src={moreIcon} alt="More Icon" className="moreNavIcon" />
+        More
+        {/* Pass'closeModal' as props to <NavbarMobileModalContent/> through <NavBarMobileModal/> */}
+        <NavBarMobileModal isOpen={isModalOpen} onClose={closeModal}>
+          <NavbarMobileModalContent onClose={closeModal} />
+        </NavBarMobileModal>
+      </button>
     </nav>
   );
 };

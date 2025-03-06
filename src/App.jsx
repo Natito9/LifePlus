@@ -13,7 +13,6 @@ import HpHomepage from "./routes/healthcare_provider/HpHomepage/HpHomepage";
 import PatientProfile from "./routes/healthcare_provider/PatientProfile/PatientProfile";
 import PatientRecords from "./routes/healthcare_provider/PatientRecords/PatientRecords";
 import PatientHomepage from "./routes/patient/PatientHomepage/PatientHomepage";
-import Header from "./components/layout/Header/Header";
 import NavBar from "./components/layout/NavBar/NavBar";
 import "./reset.css";
 import "./App.css";
@@ -24,7 +23,6 @@ function App() {
   return (
     <div className="App">
       <UserRoleProvider>
-        <Header />
         {/* Render the navbar if it is not on landingpage */}
         {!isLandingPage && <NavBar />}
         <Routes>
