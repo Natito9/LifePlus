@@ -67,7 +67,9 @@ const NavBarMobile = () => {
             <img src={moreIcon} alt="More Icon" className="moreNavIcon" />
             More
           </button>
-          <NavBarMobileModal isOpen={isModalOpen} onClose={closeModal} />
+          <NavBarMobileModal isOpen={isModalOpen} onClose={closeModal}>
+            <NavbarMobileModalContent onClose={closeModal} />
+          </NavBarMobileModal>
         </>
       )}
     </nav>
