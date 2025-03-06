@@ -39,13 +39,9 @@
 .btnLogOut{
     border-radius: 0rem 0rem 0.625rem 0.625rem;
     padding-right: 1.5rem;
-<<<<<<< HEAD
-}
-=======
 }
 
 .btnLogOut:hover {
     cursor: pointer;
     background-color: var(--hover-active-color);
 }
->>>>>>> ed79bbf99fbb3c9957fcbade757325adf0a04116
