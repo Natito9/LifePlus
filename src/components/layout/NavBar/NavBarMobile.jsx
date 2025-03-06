@@ -43,15 +43,6 @@ const NavBarMobile = () => {
             <img src={homeIcon} alt="Home Icon" className="homeNavIcon" />
             Home
           </button>
-
-          <button className="btn moreNav" onClick={toggleModal}>
-            <img src={moreIcon} alt="More Icon" className="moreNavIcon" />
-            More
-          </button>
-          {/* Pass'closeModal' as props to <NavbarMobileModalContent/> through <NavBarMobileModal/> */}
-          <NavBarMobileModal isOpen={isModalOpen} onClose={closeModal}>
-            <NavbarMobileModalContent onClose={closeModal} />
-          </NavBarMobileModal>
         </>
       ) : (
         <>
@@ -62,16 +53,16 @@ const NavBarMobile = () => {
             <img src={homeIcon} alt="Home Icon" className="homeNavIcon" />
             Home
           </button>
-
-          <button className="btn moreNav" onClick={toggleModal}>
-            <img src={moreIcon} alt="More Icon" className="moreNavIcon" />
-            More
-          </button>
-          <NavBarMobileModal isOpen={isModalOpen} onClose={closeModal}>
-            <NavbarMobileModalContent onClose={closeModal} />
-          </NavBarMobileModal>
         </>
       )}
+      <button className="btn moreNav" onClick={toggleModal}>
+        <img src={moreIcon} alt="More Icon" className="moreNavIcon" />
+        More
+      </button>
+      {/* Pass'closeModal' as props to <NavbarMobileModalContent/> through <NavBarMobileModal/> */}
+      <NavBarMobileModal isOpen={isModalOpen} onClose={closeModal}>
+        <NavbarMobileModalContent onClose={closeModal} />
+      </NavBarMobileModal>
     </nav>
   );
 };
