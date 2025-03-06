@@ -16,12 +16,12 @@ function LandingPage() {
       <h2 className="mediumText questionText" >Who are you?</h2>
       <button className="btnPatient"
       onClick={() => {setUserRole("patient"); 
-        navigate("/login");
+        navigate("/patient/homepage");
       }}
       >Patient</button>
       <button className="btnHp"
        onClick={() => {setUserRole("provider");
-        navigate("/login");
+        navigate("/hp/homepage");
        }}>Healthcare provider</button>
       <p className="termsAcceptance">By signing  up or logging in, I accept the apps <em>Terms of service</em> and <em> Privacy policy</em></p>
     </div>
