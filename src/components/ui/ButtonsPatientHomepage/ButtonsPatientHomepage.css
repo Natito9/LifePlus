@@ -22,7 +22,7 @@
   grid-row: auto;
   gap: 21px;
   justify-content: center;
-  justify-items: center;
+  justify-items:baseline;
   align-content: center;
   align-items: center;
   max-width: 430px;
@@ -42,8 +42,9 @@
 .btnTestResults,
 .btnPrescriptions {
   flex-direction: column;
-  width: 160px;
-  height: 163px;
+  width: 100%;
+  /* width: 160px; */
+  height: 180px;
 }
 
 .btnTestResults {
