@@ -9,20 +9,20 @@ function NavBarDesktopModal({ closeModal }) {
 
     return (
         <div className="modalOverlay" onClick={closeModal}>
-            <div className="btnNavbarMobileModalContainer">
-                <button
-                    className="btnMyProfile"
-                    onClick={() => {
-                        navigate("/user-profile");
-                        closeModal();
-                    }}>
+            <div 
+                className="btnNavbarDesktopModalContainer" 
+                onClick={(e) => e.stopPropagation()}
+            >
+                <button className="btnMyProfile"
+                    onClick={() => navigate("/user-profile")}
+                >
                     My profile
                     <img src={profileIcon} alt="Profile Icon" />
                 </button>
 
                 <button className="btnLogOut" onClick={() => {
                     navigate("/");
-                    closeModal();
+                    closeModal(); 
                 }}>
                     Log out
                     <img src={logOutIcon} alt="Log Out Icon" />

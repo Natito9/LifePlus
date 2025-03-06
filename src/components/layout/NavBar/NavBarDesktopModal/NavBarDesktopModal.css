@@ -1,22 +1,19 @@
-/* .modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.modalOverlay {
+    position: absolute;
+    top: 70px;
+    right: 10px;
     z-index: 1000;
 }
-.btnNavbarMobileModalContainer{
+.btnNavbarDesktopModalContainer{
     display: flex;
     flex-direction: column;
-    gap:0.15rem
+    gap: 0.15rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001; 
 }
 
-.btnNavbarMobileModalContainer button:hover{
+.btnNavbarDesktopModalContainer button:hover{
     background-color: #c2c8A5;
     cursor: pointer;
 }
@@ -42,4 +39,9 @@
 .btnLogOut{
     border-radius: 0rem 0rem 0.625rem 0.625rem;
     padding-right: 1.5rem;
-} */
+}
+
+.btnLogOut:hover {
+    cursor: pointer;
+    background-color: var(--hover-active-color);
+}
