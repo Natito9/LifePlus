@@ -14,18 +14,12 @@ const NavBarMobile = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const toggleModal = (e) => {
-    e.stopPropagation();
-    console.log("Toggling modal", isModalOpen);
-    setIsModalOpen((prevState) => {
-      console.log("Previous State:", prevState);
-      return !prevState;
-    });
+  const toggleModal = () => {
+    setIsModalOpen((prev) => !prev);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    console.log("Closing modal");
   };
 
   const isHomepageActive =
