@@ -1,11 +1,14 @@
-import HeaderProfileIconDoctor from "../../ui/HeaderProfileIcons/HeaderProfileIconDoctor";
-import HeaderProfileIconPatient from "../../ui/HeaderProfileIcons/HeaderProfileIconPatient";
+import HeaderProfileIconDoctor from "../../ui/NavBarProfileAvatarDesktop/NavBarProfileAvatarDoctor";
+import HeaderProfileIconPatient from "../../ui/NavBarProfileAvatarDesktop/NavBarProfileAvatarPatient";
 import NavBarDesktopModal from "./NavBarDesktopModal/NavBarDesktopModal";
 import { useUserRole } from "../../UserRoleContext/UserRoleContext";
+import { useState } from "react";
 import "./NavBarDesktop.css";
 
 function NavBarDesktop() {
     const { userRole } = useUserRole();
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
         <div className="homepageDesktopWrap">
@@ -17,7 +20,7 @@ function NavBarDesktop() {
                     <HeaderProfileIconDoctor />
                 ) : null}
             </div>
-            <NavBarDesktopModal />
+            {isModalOpen && <NavBarDesktopModal closeModal={() => setIsModalOpen(false)} />}
         </div>
     )
 }
