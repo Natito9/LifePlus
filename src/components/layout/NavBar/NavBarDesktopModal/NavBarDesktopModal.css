@@ -1,0 +1,33 @@
+.btnNavbarMobileModalContainer{
+    display: flex;
+    flex-direction: column;
+    gap:0.15rem
+}
+
+.btnNavbarMobileModalContainer button:hover{
+    background-color: #c2c8A5;
+    cursor: pointer;
+}
+
+.btnMyProfile,
+.btnLogOut {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  width: 11rem;
+  height: 2.8125rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--primary-color);
+}
+
+.btnMyProfile{
+    border-radius: 0.625rem 0.625rem 0rem 0rem;
+}
+
+.btnLogOut{
+    border-radius: 0rem 0rem 0.625rem 0.625rem;
+    padding-right: 1.5rem;
+}
