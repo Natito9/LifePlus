@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./NavBarMobileModal.css";
-import NavbarMobileModalContent from "./NavBarMobileModalContent";
 
-function NavBarMobileModal({ isOpen, onClose }) {
+function NavBarMobileModal({ isOpen, onClose, children }) {
   const modalRef = useRef(null);
 
   useEffect(() => {
@@ -32,7 +31,7 @@ function NavBarMobileModal({ isOpen, onClose }) {
     <div>
 
       <div ref={modalRef} className="navModal" >
-        <NavbarMobileModalContent />
+        {children}
       </div>
     </div>
   );

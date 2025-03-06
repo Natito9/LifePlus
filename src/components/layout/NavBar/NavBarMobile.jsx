@@ -3,6 +3,7 @@ import moreIcon from "../../../assets/icons/dotsVerticalMore.svg";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useUserRole } from "../../UserRoleContext/UserRoleContext";
 import NavBarMobileModal from "./NavBarMobileModal/NavBarMobileModal";
+import NavbarMobileModalContent from "./NavBarMobileModal/NavBarMobileModalContent";
 import "./NavBarMobile.css";
 import { useState } from "react";
 
@@ -47,7 +48,10 @@ const NavBarMobile = () => {
             <img src={moreIcon} alt="More Icon" className="moreNavIcon" />
             More
           </button>
-          <NavBarMobileModal isOpen={isModalOpen} onClose={closeModal} />
+        {/* Pass'closeModal' as props to <NavbarMobileModalContent/> through <NavBarMobileModal/> */}
+       <NavBarMobileModal isOpen={isModalOpen} onClose={closeModal}>
+            <NavbarMobileModalContent onClose={closeModal} />
+          </NavBarMobileModal>
         </>
       ) : (
         <>
