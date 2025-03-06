@@ -22,12 +22,11 @@
   grid-row: auto;
   gap: 21px;
   justify-content: center;
-  justify-items: center;
+  justify-items:baseline;
   align-content: center;
   align-items: center;
-  max-width: 430px;
   min-width:340px;
-  width: 100%;
+  max-width: 100%;
   
 }
 
@@ -42,8 +41,9 @@
 .btnTestResults,
 .btnPrescriptions {
   flex-direction: column;
-  width: 160px;
-  height: 163px;
+  width: 100%;
+  /* width: 160px; */
+  height: 160px;
 }
 
 .btnTestResults {
@@ -71,7 +71,7 @@
 @media (min-width: 600px) and (max-width: 1024px) {
     .btnsPHomepageContainer {
       margin: 16px; 
-      width: 100%;  
+      max-width: 100%;  
     }
   
     .btnTestResults,
